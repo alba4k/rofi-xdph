@@ -1,20 +1,20 @@
 #include <string>
+#include <string_view>
+#include <cstdlib>
 
 #include "locale.h"
 
-std::string localize(std::string input) {
-    const std::string LANG = std::string{getenv("LANG")}.substr(0, 2);
+std::string localize(std::string_view input) {
+    const char* lang = std::getenv("LANG");
+    if (!lang) return std::string(input);
 
-    // could also use switches but whatever
-    if(input == "at") {
-        if(LANG == "it") return "a";
-    }
-    else if(input == "Select Region") {
-        if(LANG == "it") return "Seleziona Regione";
-    }
-    else if(input == "Screen") {
-        if(LANG == "it") return "Schermo";
+    const std::string_view LANG(lang);
+
+    if (LANG.substr(0, 2) == "it") {
+        if (input == "at") return "a";
+        if (input == "Select Region") return "Seleziona Regione";
+        if (input == "Screen") return "Schermo";
     }
 
-    return input;
+    return std::string(input);
 }
