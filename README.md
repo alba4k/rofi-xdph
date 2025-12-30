@@ -2,6 +2,8 @@
 
 Use [Rofi](https://github.com/davatorium/rofi) as a graphical frontend for [xdg-desktop-portal](https://github.com/hyprwm/xdg-desktop-portal-hyprland)'s share picker.
 
+<img width="480" height="300" alt="immagine" src="https://github.com/user-attachments/assets/bd3b7f20-079f-4c54-9480-757f591b586c" />
+
 Used a lot of code from [hyprland-share-picker](https://github.com/hyprwm/xdg-desktop-portal-hyprland/blob/master/hyprland-share-picker).
 
 ## Usage
