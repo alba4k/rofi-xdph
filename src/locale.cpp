@@ -12,8 +12,9 @@ std::string localize(std::string_view input) {
 
     if (LANG.substr(0, 2) == "it") {
         if (input == "at") return "a";
-        if (input == "Select Region") return "Seleziona Regione";
         if (input == "Screen") return "Schermo";
+        if (input == "Select Region") return "Seleziona Regione";
+        if (input == "Select") return "Seleziona";
     }
 
     return std::string(input);

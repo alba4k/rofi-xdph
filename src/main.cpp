@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
 
     for_rofi += localize("Select Region") + "\n";
 
-    Hyprutils::OS::CProcess proc("/bin/sh", {"-c", "rofi -format i -dmenu -p 'Seleziona' <<EOF\n" + for_rofi + "EOF"});
+    Hyprutils::OS::CProcess proc("/bin/sh", {"-c", "rofi -format i -dmenu -p " + localize("Select") + " <<EOF\n" + for_rofi + "EOF"});
     if (!proc.runSync()) {
         std::cout << "error1\n";
         return 0; // this is what hyprland-share-picker does
